@@ -18,7 +18,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 //app.use(require('prerender-node').set('prerenderToken', 'fnu9gwOPhdT0b30IXLI8'));
-app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:3000'));
+app.use(require('prerender-node').set('prerenderServiceUrl', 'http://service.prerender.io'));
 
 var port = process.env.PORT || 1337;
 
