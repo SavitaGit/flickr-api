@@ -18,9 +18,9 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 //app.use(require('prerender-node').set('prerenderToken', 'fnu9gwOPhdT0b30IXLI8'));
-app.use(require('prerender-node').set('prerenderServiceUrl', 'http://service.prerender.io'));
+app.use(require('prerender-node').set('prerenderServiceUrl', 'https://prerender-test402.herokuapp.com'));
 
-var port = process.env.PORT || 1337;
+
 
 //process.env.NODE_ENV = 'production';
 
@@ -40,6 +40,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine','ejs');
 app.set('view cache', false);
 
+var port = process.env.PORT || 1337;
 
 app.listen(port, function(){
 	console.log('listening @ port : ' + port);
